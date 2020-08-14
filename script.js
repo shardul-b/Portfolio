@@ -1,3 +1,4 @@
+
 const ids=(val)=>{
 	let value=document.getElementById(val);
 	return value;
@@ -10,6 +11,13 @@ const creator=(val)=>{
 	let created=document.createElement(val);
 	return created;
 };
+
+/*window.addEventListener('scroll',()=>{
+
+	let Yscroll=window.pageYOffset;
+	classes('top')[0].style.position='relative';
+	classes('top')[0].style.top=-(Yscroll*0.2)+'px';
+});*/
 
 const projects_info={
 	wa:{
@@ -34,7 +42,7 @@ const projects_creator=()=>{
 		card.classList.add('card');
 		//Overlay for scroll
 		const cardOverlay=creator('div');
-		cardOverlay.classList.add('card-overlay');
+		cardOverlay.classList.add('card-overlay','hide');
 		const card_head=creator('h3');
 		card_head.classList.add('card-head','flex-space');
 		//title
