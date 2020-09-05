@@ -10,7 +10,6 @@
     src: url("./Pacifico/Pacifico-Regular.ttf");
     font-family: pacifico;
 }
-
 *, *::before, *::after{
 	box-sizing: border-box;
 	scroll-behavior: smooth;
@@ -22,10 +21,18 @@
 *::-webkit-scrollbar {
   display: none;
 }
-body{
+html,body{
 	margin:0;
 	padding: 0;
+	height:100%;
 	outline: none;
+}
+.all-container{
+	flex-direction: column;
+}
+.top,.work,.education,footer{
+	width:100%;
+	position: relative;
 }
 .container{
 	width: 80%;
@@ -68,14 +75,14 @@ span{
 	width:2em;
 	height: 2em;
 }
-/*Top*/
+/*Top Completed for Mobile*/
 .top{
+	height:100vh;
 	background:url('Images/back.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	opacity: 0.9;
-	height:100vh;
 	background-attachment: scroll;
 	background-attachment: fixed;
 }
@@ -109,80 +116,74 @@ span{
 	color:#FFF;
 	font-size: 0.8rem;
 }
-/*Profile Section*/
+/*Profile Section Mobile Complete*/
+.profile-section{
+	background-color: pink;
+	margin:0;
+}
 h1{
-	font-size: 2rem;
+	background-color: red;
+	font-size: 2.5rem;
 	text-align: center;
-	padding-bottom:0.8em;
 }
 .section-title{
-	box-shadow:0 1px 0 0 gray;
-}
-.profile-section{
-	height: 100vh;
+	box-shadow:0 1px 0 0 darkgray;
 }
 .profile-section .container{
 	font-size: 1.2rem;
-	/*padding:1em 0;*/
-}
-.personal-details{
-	padding:1em 0; 
 }
 .detail{
 	font-size: 1.2rem;
-	padding: 0.5em 0;
-	border: 1px solid red;
 	justify-content: center;
+}
+.about-section{
+	padding:0.3em 0;
+}
+.about-title{
+	margin:0;
+}
+.about{
+	text-align: justify;
+	padding-bottom:1em;
 }
 .title{
 	font-weight: bold;
 }
 .image-container{
-	height:12em;
-	width:12em;
-
+	height:10em;
+	width:10em;
 	margin:0 auto;
 }
 .image{
 	border-radius: 50%;
 	border:1px solid #000;
 }
-
 .about-desktop{
 	display: none;
 }
-/*
-.skills{
-	font-size: 1rem;
-}*/
-/*Middle*/
-/*.middle-section{
-	height:100vh;
-}*/
+
 /*Work*/
 .work{
-	height: 100vh;
 	background: lightgreen;
 }
 .work .container{
-	position: relative;
-	top: 10%;
-	padding:1em 0;
+	padding-bottom:1.5em;
 }
 /*Education*/
 .education{
-	height: 100vh;
+	border:1px solid brown;
+	background: lightgreen;
 }
-.details{
-	/*border:1px solid red;*/
+.education .container{
+	padding-bottom: 1.5em;
+}
+.detail-container{
+	margin:0.5em 0;
+}
+.details{	
 	width:85%;
-	padding: 0.5em 0;
 }
-/*Bottom section*/
-/*.bottom-section{
-	background: red;
-	height:100vh;
-}*/
+
 /*Projects*/
 .projects{
 	border:1px solid darkgreen;
@@ -191,7 +192,7 @@ h1{
 .projects .container{
 	background: violet;
 	position: relative;
-	top: 10%;
+	/*top: 10%;*/
 }
 .project-cards{
 	justify-content: center;
@@ -248,6 +249,10 @@ footer .container{
 
 
 @media (min-width: 800px){
+	.top, .profile-section,.work,footer{
+		width: 100%;
+		height: 100vh;
+	}
 	.intro .container{
 		align-items: center;
 		font-size: 2.5rem;
@@ -275,9 +280,11 @@ footer .container{
 	}
 	/*Profile Details*/
 	h1{
-		font-size: 3rem;
+		font-size: 3.5rem;
 	}
 	.image-container{
+		height:12em;
+		width:12em;	
 		margin: 0;
 	}
 	.about-section{
