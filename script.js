@@ -1,4 +1,4 @@
-
+// AOS.init();
 const ids=(val)=>{
 	let value=document.getElementById(val);
 	return value;
@@ -12,29 +12,23 @@ const creator=(val)=>{
 	return created;
 };
 
-/*window.addEventListener('scroll',()=>{
-
-	let Yscroll=window.pageYOffset;
-	classes('top')[0].style.position='relative';
-	classes('top')[0].style.top=-(Yscroll*0.2)+'px';
-});*/
-
 const projects_info={
 	wa:{
 		name:'WhatsApp UI Clone',
-		inprogress:true,
+		status:'In Progress',
+		completed:false,
 		description:'A simple WhatsApp UI clone',
-		image:'',
+		image:'./Images/wa.jpg',
 		link:''
 	},
-	/*soon:{
+	soon:{
 		name:'Coming Soon',
-		status:'',
+		status:'Planned',
+		completed:false,
 		description:'',
-		inprogress:false,
 		image:'',
 		link:''
-	}*/
+	}
 }
 const projects_creator=()=>{
 	for (let i in projects_info){
@@ -42,7 +36,7 @@ const projects_creator=()=>{
 		card.classList.add('card');
 		//Overlay for scroll
 		const cardOverlay=creator('div');
-		cardOverlay.classList.add('card-overlay','hide');
+		cardOverlay.classList.add('card-overlay');
 		const card_head=creator('h3');
 		card_head.classList.add('card-head','flex-space');
 		//title
@@ -53,11 +47,11 @@ const projects_creator=()=>{
 		//status
 		const status=creator('span');
 		status.classList.add('status');
-		if(projects_info[i]['inprogress']){	
-			status.innerHTML='In progress';
+		if(projects_info[i]['completed']){	
+			status.innerHTML=projects_info[i]['status'];
 			card_head.appendChild(status);
 		}else{
-			status.innerHTML='Completed';
+			status.innerHTML=projects_info[i]['status'];
 			card_head.appendChild(status);
 		}
 		cardOverlay.appendChild(card_head);
@@ -76,11 +70,58 @@ const projects_creator=()=>{
 		//cardImage
 		const cardImage=creator('div');
 		cardImage.classList.add('card-image');
-		cardImage.style.background=projects_info[i]['image'];
+
+		//console.log(projects_info[i]['image'])
+		//cardImage.style.backgroundColor='green';
+		cardImage.style.background=`url('${projects_info[i]['image']}') no-repeat center`;
+		cardImage.style.backgroundSize='cover';
 		card.appendChild(cardImage);
+		//card.appendChild(cardOverlay);
 		classes('project-cards')[0].appendChild(card);
 	}
 }
+const skillsInfo={
+	HTML:9,
+	CSS:8,
+	JavaScript:7,
+	PHP:5,
+	SQL:6,
+	MongoDb:6,
+	NodeJS:6,
+	React:7,
+	Express:6,
+	BootStrap:7,
+	FireBase:6,
+	LESS:4,
+	SCSS:4,
+	TypeScript:4
+}
+const skills_creator=()=>{
+	for(let j in skillsInfo){
+		/*Details div*/
+		const skillDetail=creator('div');
+		skillDetail.classList.add('skill-detail','flex-space');
+		/*Name of skill*/
+		const skillName=creator('span');
+		skillName.classList.add('skill-name');
+		skillName.innerHTML=j;
+		skillDetail.appendChild(skillName);
+		/*Rating*/
+		const skillRating=creator('div');
+		skillRating.classList.add('skill-rating','flex');
+		const rateObject=creator('div');	
+		rateObject.classList.add('rate-object');
+		const rateValue=creator('span');
+		rateValue.classList.add('rate-value');
+		rateValue.style.width=`${skillsInfo[j]*10}%`;
+		rateObject.appendChild(rateValue);
+		skillRating.appendChild(rateObject)
+		skillDetail.appendChild(skillRating);
+		classes('skills-box')[0].appendChild(skillDetail);
+	}	
+	
+}
 (()=>{
-	projects_creator();
+	projects_creator()
+	skills_creator();
 })();

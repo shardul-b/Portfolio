@@ -36,7 +36,7 @@ html,body{
 }
 .container{
 	width: 80%;
-	max-width: 1100px;
+	/*max-width: 1100px;*/
 	margin: 0 auto;
 }
 a{
@@ -58,6 +58,9 @@ span{
 .name{
 	font-family: rouge;
 }
+.hide{
+	display: none;
+}
 /*Header Section*/
 .nav{
 	width: 100%;
@@ -65,7 +68,7 @@ span{
 	position: sticky;
 	top:0;
 	left:0;
-	color:#FFF;
+	color:floralwhite;
 	z-index: 1;
 }
 .nav .container{
@@ -97,7 +100,7 @@ span{
 	justify-content: center;
 }
 .intro-name,.intro-text{
-	color:#FFF;
+	color:floralwhite;
 }
 .intro-text{
 	padding-top:0.5em;
@@ -106,23 +109,23 @@ span{
 .intro-name{
 	font-family: pacifico;
 	padding-bottom:0.3em;
-	border-bottom:0.1px solid #FFF; 
+	border-bottom:0.1px solid whitesmoke; 
 	width:100%;
 }
 .picture-credit{
 	position: absolute;
 	bottom:0;
 	right:0;
-	color:#FFF;
+	color:floralwhite;
 	font-size: 0.8rem;
 }
 /*Profile Section Mobile Complete*/
 .profile-section{
-	background-color: pink;
+	background-color: floralwhite;
 	margin:0;
 }
 h1{
-	background-color: red;
+	/*background-color: red;*/
 	font-size: 2.5rem;
 	text-align: center;
 }
@@ -164,15 +167,16 @@ h1{
 
 /*Work*/
 .work{
-	background: lightgreen;
+	background: #000;
+	color: floralwhite;
 }
 .work .container{
 	padding-bottom:1.5em;
 }
 /*Education*/
 .education{
-	border:1px solid brown;
-	background: lightgreen;
+	color:floralwhite;
+	background:#000;
 }
 .education .container{
 	padding-bottom: 1.5em;
@@ -183,16 +187,63 @@ h1{
 .details{	
 	width:85%;
 }
-
+/*Skills*/
+.skills{
+	width:100%;
+}
+.skills .container{
+	width:90%;
+	
+}
+.skill-detail{
+	padding:1em 0;
+}
+.skill-name{
+	width:35%;
+	font-size:1.3em;
+	/*border:1px solid blue;*/
+}
+.skill-rating{
+	width:75%;
+	/*border:1px solid red;*/
+}
+.rate-object{
+	border-radius: 25px;
+	width:100%;
+	border:1px solid green;
+}
+.rate-value{
+	display: block;
+	height:0.5em;
+	border-radius: 25px;
+	background: #000;	
+	position: relative;
+  	overflow: hidden;
+  	transition: all;
+}
 /*Projects*/
 .projects{
-	border:1px solid darkgreen;
-	height: 100vh;
+	/*border:1px solid darkgreen;*/
+	background-color: #000;
+	color:floralwhite;
+	width: 100%;
+}
+.card-overlay{	
+	position: absolute;
+	height:0;
+	width:100%;
+	transition: .5s ease-in;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.8);
+	color:floralwhite;
+}
+.card:hover>.card-overlay,.card:focus>.card-overlay,.card:active>.card-overlay{
+  	height: 8em;
 }
 .projects .container{
-	background: violet;
 	position: relative;
-	/*top: 10%;*/
+	padding:1em 0;
 }
 .project-cards{
 	justify-content: center;
@@ -200,7 +251,12 @@ h1{
 }
 .card{
 	border:1px solid darkblue;
-	height:18em;
+	border-radius: 5px;
+	margin-bottom:1em;
+}
+.card-image{
+	width: 100%;
+	height:8em;
 }
 .status{
 	background: green;
@@ -210,28 +266,36 @@ h1{
 }
 /*Footer*/
 footer{
-	height:100vh;
-	background: skyblue;
+	background: floralwhite;
+	padding:1em 0;
 	position: relative;
 }
 footer .container{
-	padding: 1em 0;
 	text-align: center;
-	
-	border:1px solid red;
+	/*border:1px solid red;*/
+	margin-bottom:3em;
 	/*height: 100%;*/
+}
+.resume-link{
+	text-align: center;	
 }
 .links{
 	justify-content: center;
 }
 .foot-head{
-
+	text-align: center;
 }
 .email-icon{
 	background: url('Icons/email.svg');
 }
 .linkedin-icon{
-	background: url('Images/linkedin.png');
+	background: url('Icons/linkedin.svg');
+}
+.github-icon{
+	background: url('Icons/github1.svg');	
+}
+.sololearn-icon{
+	background: url('Icons/sololearn.svg');	
 }
 .foot-icon{
 	background-repeat: no-repeat;
@@ -241,6 +305,7 @@ footer .container{
 	width: 2em;
 }
 .credit{
+
 	text-align: right;
     position:absolute;
     bottom:0;
@@ -262,7 +327,7 @@ footer .container{
 		margin-left: 3.5em;
 	}
 	.intro-name,.intro-text{
-		color:#FFF;
+		color:floralwhite;
 		/*padding:0 2em;*/
 	}
 	.intro-text{
@@ -274,7 +339,7 @@ footer .container{
 	.intro-name{
 		border:none;
 		width:auto;
-		border-right:0.1px solid #FFF; 
+		border-right:0.1px solid floralwhite; 
 		padding:0;
 		padding-right:0.3em;
 	}
