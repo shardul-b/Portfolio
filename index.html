@@ -8,29 +8,49 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<!--<header class="nav">
+	<!-- <div class="custom-scroll">
+		<div class='tool flex'>
+			<div id="tooltip " class=" tooltip hide" role='tooltip'>
+				Top
+				<div id="arrow"></div>
+			</div>
+			<div class="scroll-dot" aria-describedby='tooltip'></div>
+		</div>
+		
+		<div class="scroll-dot" aria-describedby='tooltip'></div>
+		<div class="tooltip about" role='tooltip'></div>
+		<div class="scroll-dot"></div>
+		<div class="tooltip career" role='tooltip'></div>
+		<div class="scroll-dot"></div>
+		<div class="tooltip skills" role='tooltip'></div>
+		<div class="scroll-dot"></div>
+		<div class="tooltip projects" role='tooltip'></div>
+		<div class="scroll-dot"></div>
+		<div class="tooltip footer" role='tooltip'></div>
+	</div> -->
+	<!-- <header class="nav">
 		<div class="container flex-space">
 			<div class="logo-container">
 				<img src="Images/logo.png" alt="SB" class="logo">
 			</div>
 			<span class="name">Shardul Birje</span>
 		</div>
-	</header> -->
+	</header>  -->
 	<div class=" all-container flex">
-	<div class="top">
-		<div class="intro">
+	<div class="top flex">
+		<!-- <div class="intro"> -->
 			<div class="container flex">				
 				<span class="intro-name">Shardul Birje</span>
-				<span class="intro-text">Personal Portfolio</span> 
+				<span class="intro-text"></span> 
 			</div>
-		</div>
-		<span class='picture-credit'>Photo by <a href="https://unsplash.com/@alesnesetril?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ales Nesetril</a> on <a href="https://unsplash.com/s/photos/technology?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+		<!-- </div> -->
+		<!-- <span class='picture-credit'>Photo by <a href="https://unsplash.com/@alesnesetril?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ales Nesetril</a> on <a href="https://unsplash.com/s/photos/technology?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> -->
 	</div>
 	<div class="profile-section">
 		<div class="section-title">
 			<h1>Profile</h1>
 		</div>
-		<div class="container">
+		<div class="container profile-section-container">
 			<div class="desktop-image-title flex-space">
 				<div class="image-container">
 					<img src="Images/Shardul.png" alt="Shardul" class="image">
@@ -38,7 +58,7 @@
 				<div class="about-desktop">
 					<h3 class="about-title">About Me:</h3>
 					<span class="about">
-						Introduced to Web Development and Programming in 2017.I Started with basic websites back then and today I have a good knowledge of Front end technologies and some basic knowledge about Back end technologies.I love spending time on fixing or rather improving things.I believe in quality and precision even in the little details.
+						Introduced to Web Development and Programming in 2017. I Started with basic websites back then and today I have a good knowledge of Front end technologies and some basic knowledge about Back end technologies.I love spending time on fixing or rather improving things.I believe in quality and precision even in the little details.
 					</span>
 				</div>
 			</div>
@@ -149,10 +169,20 @@
 	<!-- </div> -->
 	<!-- </div> -->
 	<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+	<!-- <script src='https://unpkg.com/@popperjs/core@2'></script> -->
 	<script src="script.js"></script>
 	<script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.12'><\/script>".replace("HOST", location.hostname));
 //]]></script>
-
+	<!-- <script type="text/javascript">
+		//let tipClass=document.getElementsByClassName('tooltip');
+		(popperCreator=()=>{
+			for(let i in tips){
+				createPopper(tips[i], dots[i], {
+						placement: 'left',
+				});
+			}
+		})();		
+	</script> -->
 </body>
 </html>

@@ -12,6 +12,11 @@ const creator=(val)=>{
 	return created;
 };
 
+// classes('scroll-dot')[0].addEventListener('click',()=>{
+// 	classes('tooltip')[0].classList.toggle('hide');
+// })
+
+
 const projects_info={
 	wa:{
 		name:'WhatsApp UI Clone',

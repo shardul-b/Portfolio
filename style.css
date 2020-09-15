@@ -1,3 +1,5 @@
+
+
 @font-face{
     src: url("./Crimson_Text/CrimsonText-Regular.ttf");
     font-family: Crimson;
@@ -25,11 +27,15 @@ html,body{
 	margin:0;
 	padding: 0;
 	height:100%;
+	min-height:100vh;
 	outline: none;
+	background-color: whitesmoke;
+
 }
 .all-container{
 	flex-direction: column;
 }
+
 .top,.work,.education,footer{
 	width:100%;
 	position: relative;
@@ -64,11 +70,11 @@ span{
 /*Header Section*/
 .nav{
 	width: 100%;
-	background: #000;
-	position: sticky;
+	background:#FFF;
+	position: fixed;
 	top:0;
 	left:0;
-	color:floralwhite;
+	color:#000;
 	z-index: 1;
 }
 .nav .container{
@@ -81,35 +87,54 @@ span{
 /*Top Completed for Mobile*/
 .top{
 	height:100vh;
-	background:url('Images/back.jpg');
-	background-size: cover;
+	background-color: #FFF;
+	/*justify-content: center;*/
+	/*background:url('Images/back.jpg'); */
+	/*background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	opacity: 0.9;
-	background-attachment: scroll;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
 }
-.intro{
+/*.intro{
 	text-align: center;
-}
-.intro .container{
+}*/
+.top .container{
 	align-items: center;
-	font-size: 1.8rem;
-	padding:4em 0;
+	font-size: 2.5rem;
+	/*padding:4em 0;*/
 	flex-direction: column;
 	justify-content: center;
+	text-align: center;
 }
 .intro-name,.intro-text{
-	color:floralwhite;
+	color:#000;
 }
 .intro-text{
 	padding-top:0.5em;
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 }
+.intro-text::before{
+	content:'MERN Stack Developer';
+	animation:namechange 8s 4s infinite;
+}
+
+@keyframes namechange{
+	40%{
+		content:'Crazy Developer';
+	}
+	50%{
+		content: 'Self Learner';
+	}
+	
+	100%{
+		content:'MERN Stack Developer';
+	}
+}
+
 .intro-name{
 	font-family: pacifico;
 	padding-bottom:0.3em;
-	border-bottom:0.1px solid whitesmoke; 
+	border-bottom:0.1px solid #000; 
 	width:100%;
 }
 .picture-credit{
@@ -121,7 +146,8 @@ span{
 }
 /*Profile Section Mobile Complete*/
 .profile-section{
-	background-color: floralwhite;
+	background-color: #011B56;
+	color:#FFF;
 	margin:0;
 }
 h1{
@@ -159,7 +185,7 @@ h1{
 }
 .image{
 	border-radius: 50%;
-	border:1px solid #000;
+	border:1px solid #1A1A1D;
 }
 .about-desktop{
 	display: none;
@@ -167,16 +193,16 @@ h1{
 
 /*Work*/
 .work{
-	background: #000;
-	color: floralwhite;
+	background: #FFF;
+	/*color: floralwhite;*/
 }
 .work .container{
 	padding-bottom:1.5em;
 }
 /*Education*/
 .education{
-	color:floralwhite;
-	background:#000;
+	/*color:floralwhite;*/
+	background:#FFF;
 }
 .education .container{
 	padding-bottom: 1.5em;
@@ -187,9 +213,30 @@ h1{
 .details{	
 	width:85%;
 }
+.diploma-icon{
+	background-image: url('Images/VP.png');
+}
+.degree-icon{
+	background-image: url('Images/VIT.png');	
+}
+.school-icon{
+	background-image: url('Images/ops.jpg');	
+}
+.icon{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 3em;
+	background-color: #FFF;
+	height: 3em;
+	width:3em;
+	padding:0.5em;
+	border:1px solid #FFF;
+}
 /*Skills*/
 .skills{
 	width:100%;
+	background-color: #011B56;
+	color:#FFF;
 }
 .skills .container{
 	width:90%;
@@ -210,13 +257,14 @@ h1{
 .rate-object{
 	border-radius: 25px;
 	width:100%;
-	border:1px solid green;
+	background-color: grey;
+	/*border:1px solid green;*/
 }
 .rate-value{
 	display: block;
 	height:0.5em;
 	border-radius: 25px;
-	background: #000;	
+	background: #FFF;	
 	position: relative;
   	overflow: hidden;
   	transition: all;
@@ -224,8 +272,8 @@ h1{
 /*Projects*/
 .projects{
 	/*border:1px solid darkgreen;*/
-	background-color: #000;
-	color:floralwhite;
+	background-color: #FFF;
+	color:#000;
 	width: 100%;
 }
 .card-overlay{	
@@ -266,8 +314,9 @@ h1{
 }
 /*Footer*/
 footer{
-	background: floralwhite;
+	background: #011B56;
 	padding:1em 0;
+	color:#FFF;
 	position: relative;
 }
 footer .container{
@@ -314,32 +363,34 @@ footer .container{
 
 
 @media (min-width: 800px){
-	.top, .profile-section,.work,footer{
+	.profile-section,.skills,.projects,footer{
 		width: 100%;
 		height: 100vh;
 	}
-	.intro .container{
+	.top .container{
 		align-items: center;
-		font-size: 2.5rem;
-		padding:1em 0;
-		flex-direction: row;
+		font-size: 4.5rem;
+		/*padding:1em 0;*/
+		align-self: center;
+		border:1px solid red;
+		flex-direction: initial;
 		justify-content: center;
-		margin-left: 3.5em;
+		/*margin-left: 3.5em;*/
 	}
 	.intro-name,.intro-text{
-		color:floralwhite;
+		color:#000;
 		/*padding:0 2em;*/
 	}
 	.intro-text{
 		padding:0;
 		margin:0;
 		padding-left:0.3em;
-		font-size: 2rem;
+		font-size: 3.5rem;
 	}
 	.intro-name{
 		border:none;
 		width:auto;
-		border-right:0.1px solid floralwhite; 
+		border-right:0.1px solid #000; 
 		padding:0;
 		padding-right:0.3em;
 	}
@@ -347,9 +398,17 @@ footer .container{
 	h1{
 		font-size: 3.5rem;
 	}
+	.profile-section-container{
+		width:70%;
+		/*height: 100vh;*/
+		/*padding:1em 0;*/
+	}
 	.image-container{
+		border:1px solid red;
+		align-items: center;
 		height:12em;
-		width:12em;	
+		width:14em;	
+		border-radius: 50%;
 		margin: 0;
 	}
 	.about-section{
@@ -357,16 +416,74 @@ footer .container{
 	}
 	.about-desktop{
 		display: block;
-		border:1px solid blue;
+		/*border:1px solid blue;*/
 		width:80%;
 		margin-left:1em;
 	}
-
+	.about-title{
+		font-size: 2rem;
+	}
+	.about{
+		font-size: 1.5rem;
+	}
+	.personal-details{
+		font-size: 1.5rem;	
+		/*border:1px solid blue;	*/
+		margin:1em 0;
+	}
 	.detail{
 		justify-content: flex-start;
+		margin-left:1em;
 	}
 	.desktop-image-title{
 		align-items: center;
+		/*border:1px solid black;*/
+	}
+	/*Education*/
+	.icon{
+		background-size: 4em;
+		height: 4em;
+		width:4em;
+	}	
+	.education{
+		height:80vh;
+		border:1px solid yellow;
+	}
+	/*Skills*/
+	.skills .container{
+		width:75%;
+	}
+	.skills-box{
+		display: grid;
+		/*border:1px solid red;*/
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 2em;
+	}
+	.skill-name{
+		width:25%;
 		border:1px solid red;
+	}
+	.skill-rating{
+		width:60%;
+	}
+	/*Projects*/
+	.project-cards{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2em;
+		border:1px solid green;
+		width:100%;
+		height:50vh;
+	}
+	.card{
+		width:100%;
+		height:100%;
+	}
+	.card-overlay{
+		width: 48%;
+		background-color: rgba(122,22,23,0.8)
+	}
+	.card:hover>.card-overlay,.card:focus>.card-overlay,.card:active>.card-overlay{
+  		height: auto;
 	}
 }
