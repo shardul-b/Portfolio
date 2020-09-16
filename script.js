@@ -18,20 +18,21 @@ const creator=(val)=>{
 
 
 const projects_info={
+	confusion:{
+		name:'The ConFusion restaurant',
+		image:'',
+		link:''
+	},
+	login:{
+		name:'Login Page',
+		image:'',
+	},
 	wa:{
 		name:'WhatsApp UI Clone',
 		status:'In Progress',
 		completed:false,
-		description:'A simple WhatsApp UI clone',
+		// description:'A simple WhatsApp UI clone',
 		image:'./Images/wa.jpg',
-		link:''
-	},
-	soon:{
-		name:'Coming Soon',
-		status:'Planned',
-		completed:false,
-		description:'',
-		image:'',
 		link:''
 	}
 }
@@ -39,18 +40,26 @@ const projects_creator=()=>{
 	for (let i in projects_info){
 		const card=creator('div');
 		card.classList.add('card');
+		// const cardImage=creator('div');
+		// cardImage.classList.add('card-image');
+
+		//console.log(projects_info[i]['image'])
+		//cardImage.style.backgroundColor='green';
+		card.style.background=`url('${projects_info[i]['image']}') no-repeat center`;
+		card.style.backgroundSize='cover';
+		// card.appendChild(cardImage);
 		//Overlay for scroll
 		const cardOverlay=creator('div');
 		cardOverlay.classList.add('card-overlay');
 		const card_head=creator('h3');
-		card_head.classList.add('card-head','flex-space');
+		card_head.classList.add('card-head');
 		//title
 		const title=creator('span');
 		title.classList.add('title');
 		title.innerHTML=projects_info[i]['name'];
 		card_head.appendChild(title);
 		//status
-		const status=creator('span');
+		/*const status=creator('span');
 		status.classList.add('status');
 		if(projects_info[i]['completed']){	
 			status.innerHTML=projects_info[i]['status'];
@@ -58,30 +67,9 @@ const projects_creator=()=>{
 		}else{
 			status.innerHTML=projects_info[i]['status'];
 			card_head.appendChild(status);
-		}
+		}*/
 		cardOverlay.appendChild(card_head);
-		//Description
-		const card_desc=creator('span');
-		card_desc.classList.add('card-desc');
-		card_desc.innerHTML=projects_info[i]['description'];
-		cardOverlay.appendChild(card_desc);
-		//Button
-		const link=creator('a');
-		link.classList.add('view');
-		link.setAttribute('href',projects_info[i]['link']);
-		link.innerHTML='View Project';
-		cardOverlay.appendChild(link);
 		card.appendChild(cardOverlay);
-		//cardImage
-		const cardImage=creator('div');
-		cardImage.classList.add('card-image');
-
-		//console.log(projects_info[i]['image'])
-		//cardImage.style.backgroundColor='green';
-		cardImage.style.background=`url('${projects_info[i]['image']}') no-repeat center`;
-		cardImage.style.backgroundSize='cover';
-		card.appendChild(cardImage);
-		//card.appendChild(cardOverlay);
 		classes('project-cards')[0].appendChild(card);
 	}
 }
