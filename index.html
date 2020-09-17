@@ -2,32 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shardul Birje</title>
+	<title>Shardul Birje - Online Portfolio</title>
+	<meta name="description" content="Explore Shardul Birje's World">
+	<meta name=”robots” content="index, follow">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" href="onepage-scroll.css"> -->
+	<!-- <script type="text/javascript" src='onepagescroll.js'></script> -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<!-- <div class="custom-scroll">
-		<div class='tool flex'>
-			<div id="tooltip " class=" tooltip hide" role='tooltip'>
-				Top
-				<div id="arrow"></div>
-			</div>
-			<div class="scroll-dot" aria-describedby='tooltip'></div>
-		</div>
-		
-		<div class="scroll-dot" aria-describedby='tooltip'></div>
-		<div class="tooltip about" role='tooltip'></div>
-		<div class="scroll-dot"></div>
-		<div class="tooltip career" role='tooltip'></div>
-		<div class="scroll-dot"></div>
-		<div class="tooltip skills" role='tooltip'></div>
-		<div class="scroll-dot"></div>
-		<div class="tooltip projects" role='tooltip'></div>
-		<div class="scroll-dot"></div>
-		<div class="tooltip footer" role='tooltip'></div>
-	</div> -->
+	<div class="custom-scroll">
+		<div title ='Top' class="scroll-dot"></div>
+		<div title ='Profile' class="scroll-dot" aria-describedby='tooltip'></div>	
+		<!-- <div class="tooltip about" role='tooltip'></div> -->
+		<div title ='Career' class="scroll-dot"></div>
+		<!-- <div class="tooltip career" role='tooltip'></div> -->
+		<div title ='Skills' class="scroll-dot"></div>
+		<!-- <div class="tooltip skills" role='tooltip'></div> -->
+		<div title ='Project' class="scroll-dot"></div>
+		<!-- <div class="tooltip projects" role='tooltip'></div> -->
+		<div title ='Footer' class="scroll-dot"></div>
+		<!-- <div class="tooltip footer" role='tooltip'></div> -->
+	</div>
 	<!-- <header class="nav">
 		<div class="container flex-space">
 			<div class="logo-container">
@@ -36,8 +33,8 @@
 			<span class="name">Shardul Birje</span>
 		</div>
 	</header>  -->
-	<div class=" all-container flex">
-		<div class="top flex">
+	<div class=" main all-container flex">
+		<div id='top' class="section top flex">
 			<!-- <div class="intro"> -->
 				<div class="container flex">				
 					<span class="intro-name">Shardul Birje</span>
@@ -46,7 +43,7 @@
 			<!-- </div> -->
 			<!-- <span class='picture-credit'>Photo by <a href="https://unsplash.com/@alesnesetril?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ales Nesetril</a> on <a href="https://unsplash.com/s/photos/technology?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> -->
 		</div>
-		<div class="profile-section">
+		<div id='profile' class="section profile-section">
 			<div class="section-title">
 				<h1>Profile</h1>
 			</div>
@@ -82,7 +79,7 @@
 			</div>
 		</div>
 		<!-- Work Section -->
-		<div class="work">
+		<div id='career' class="section work">
 			<div class="section-title">
 				<h1>My Career</h1>
 			</div>
@@ -91,10 +88,10 @@
 				<div class="detail-container flex-space">
 					<span class="icon yaarme-icon"></span>
 					<div class="details">	
-						<span class="company">YaarMe</span>
+						<span class="company detail-title">YaarMe</span>
 						<span class="type">Front End Web Development Intern</span>
 						<span class="time">July 2020 - August 2020</span>
-						<span class="description">My daily responsibilities included designing developing various UI elements for the YaarMe app.</span>
+						<!-- <span class="description">My daily responsibilities included designing developing various UI elements for the YaarMe app.</span> -->
 					</div>
 				</div>
 			</div>
@@ -106,7 +103,8 @@
 				<div class="detail-container flex-space">
 					<span class="icon degree-icon"></span>
 					<div class="details">	
-						<span class="degree-college">Vidyalankar Institute of Technology</span>
+						<span class="degree-college detail-title">Vidyalankar Institute of Technology</span>
+						<span class="detail-type">B.E. Information Technology</span>
 						<span class="marks">--</span>
 						<span class="time">2019-2022</span>
 					</div>
@@ -114,7 +112,8 @@
 				<div class="detail-container flex-space">
 					<span class="icon diploma-icon"></span>
 					<div class="details">	
-						<span class="diploma-college">Vidyalankar Polytechnic</span>
+						<span class="diploma-college detail-title">Vidyalankar Polytechnic</span>
+						<span class="detail-type">Diploma in Information Technology</span>
 						<span class="marks">93.84%</span>
 						<span class="time">2016-2019</span>
 					</div>
@@ -122,7 +121,8 @@
 				<div class="detail-container flex-space">
 					<span class="icon school-icon"></span>
 					<div class="details">
-						<span class="school-college">Oxford Public School</span>
+						<span class="school detail-title">Oxford Public School</span>
+						<span class="detail-type">School-Maharashtra State Board</span>
 						<span class="marks">84%</span>
 						<span class="time">2003-2016</span>
 					</div>
@@ -130,7 +130,7 @@
 			</div>
 		</div>
 		<!-- Skills -->
-		<div class="skills">
+		<div id='skills' class="section skills">
 			<div class="section-title">
 				<h1>Skills</h1>
 			</div>
@@ -141,7 +141,7 @@
 			</div>
 		</div>
 		<!-- Projects -->
-		<div class="projects">
+		<div id='projects' class="section projects">
 			<div class="section-title">
 				<h1>Projects</h1>
 			</div>
@@ -152,7 +152,7 @@
 			</div>
 		</div>
 		<!-- Footer -->
-		<footer>
+		<footer id='footer' class="section">
 			<h2 class="foot-head">Find me at</h2>
 			<div class="container">
 				<div class="links flex-space">
@@ -165,7 +165,7 @@
 			</div>
 
 			<div class="credit flex">
-				 <span class='name'>A creation of Shardul birje</span>
+				 <span class='name'>A creation of Shardul Birje</span>
 			</div>
 		</footer>
 	</div>
@@ -173,8 +173,5 @@
 	<!-- </div> -->
 	<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 	<script src="script.js"></script>
-	<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.12'><\/script>".replace("HOST", location.hostname));
-//]]></script>
 </body>
 </html>

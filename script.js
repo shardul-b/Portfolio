@@ -25,15 +25,17 @@ const projects_info={
 	},
 	login:{
 		name:'Login Page',
-		image:'',
+		image:'./Images/login.jpg',
 	},
 	wa:{
 		name:'WhatsApp UI Clone',
-		status:'In Progress',
 		completed:false,
 		// description:'A simple WhatsApp UI clone',
 		image:'./Images/wa.jpg',
 		link:''
+	},
+	as:{
+		name:'asd',
 	}
 }
 const projects_creator=()=>{
@@ -113,8 +115,28 @@ const skills_creator=()=>{
 		classes('skills-box')[0].appendChild(skillDetail);
 	}	
 	
-}
+};
+const scroller={
+	'0':'top',
+	'1':'profile',
+	'2':'career',
+	'3':'skills',
+	'4':'projects',
+	'5':'footer'
+};
+
 (()=>{
 	projects_creator()
 	skills_creator();
+	scroll();
 })();
+
+function scroll(){
+	for(let i in scroller){
+		classes('scroll-dot')[i].addEventListener('click',()=>{
+			ids(scroller[i]).scrollIntoView();
+			// classes('scroll-dot')[i].style.background='#FFF';
+		})		
+	}
+}
+

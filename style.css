@@ -32,6 +32,24 @@ html,body{
 	background-color: #FFF;
 
 }
+.custom-scroll{
+	position:fixed;
+	top:30%;
+	right:1%;
+}
+.scroll-dot{
+	display: block;
+	cursor: pointer;
+	margin:1em 0;
+	width: 1em;
+	height:1em;
+	border:1px solid #000;
+	background-color: #000;
+	border-radius: 50%;
+}
+.scroll-dot:active{
+	background-color: #FFF;
+}
 .all-container{
 	flex-direction: column;
 	margin:0;
@@ -39,7 +57,7 @@ html,body{
 
 .top,.work,.education,footer{
 	width:100%;
-	position: relative;
+	/*position: absolute;*/
 }
 .container{
 	width: 80%;
@@ -64,6 +82,8 @@ span{
 }
 .name{
 	font-family: rouge;
+	font-weight: bolder;
+	font-size: 1.2rem;
 }
 .hide{
 	display: none;
@@ -207,10 +227,17 @@ h1{
 	padding-bottom: 1.5em;
 }
 .detail-container{
-	margin:0.5em 0;
+	margin:1.5em 0;
 }
 .details{	
-	width:85%;
+	width:75%;
+}
+.detail-title{
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+.yaarme-icon{
+	background-image: url('Images/yaarme.png');
 }
 .diploma-icon{
 	background-image: url('Images/VP.png');
@@ -341,11 +368,9 @@ footer .container{
 	width: 2em;
 }
 .credit{
-
-	text-align: right;
-    position:absolute;
+	justify-content: center;
     bottom:0;
-    right:0.5em;
+    /*right:0.5em;*/
 }
 .foot-link + .foot-link{
 	margin-left: 1.5em;
@@ -355,12 +380,11 @@ footer .container{
 	body{
 		margin:0;
 	}
-	.profile-section,.skills{
-		margin:0;
-		top:0;
-		left:0;
+	.profile-section{
 		width: 100%;
-		height: 100vh;
+	}
+	.profile-section .container{
+		height:90vh;
 	}
 	.top .container{
 		align-items: center;
@@ -440,11 +464,15 @@ footer .container{
 	}	
 	.education{
 		height:80vh;
-		border:1px solid yellow;
+		/*border:1px solid yellow;*/
+	}
+	.education .container{
+		border-top: 1px solid #DDD;
 	}
 	/*Skills*/
 	.skills .container{
 		width:75%;
+		height:80vh;
 	}
 	.skills-box{
 		display: grid;
@@ -468,14 +496,14 @@ footer .container{
 		height:100%;
 	}
 	.card{
-		height:40vh;
+		height:55vh;
 	}
 	.card-overlay{	
-		top:73%;
+		top:80%;
+		height:15%;
 	}
 	/*Footer*/
 	footer{
-		
 		height:60vh;
 	}
 	footer .container{
@@ -491,5 +519,8 @@ footer .container{
 	}
 	.foot-icon:hover{
 		filter: invert(180);
+	}
+	.name{
+		font-size:1.5rem;
 	}
 }
