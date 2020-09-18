@@ -1,4 +1,4 @@
-// AOS.init();
+
 const ids=(val)=>{
 	let value=document.getElementById(val);
 	return value;
@@ -18,78 +18,75 @@ const creator=(val)=>{
 
 
 const projects_info={
+	crl:{
+		name:'CRL Course Website UI',
+		image:'./Images/CRL.png',
+		link:'',
+		completed:true
+	},
 	confusion:{
 		name:'The ConFusion restaurant',
-		image:'',
-		link:''
+		image:'./Images/ConFusion.png',
+		link:'',
+		completed:false
 	},
 	login:{
 		name:'Login Page',
 		image:'./Images/login.jpg',
+		link:'',
+		completed:true
 	},
 	wa:{
 		name:'WhatsApp UI Clone',
 		completed:false,
-		// description:'A simple WhatsApp UI clone',
 		image:'./Images/wa.jpg',
-		link:''
-	},
-	as:{
-		name:'asd',
+		link:'https://code.sololearn.com/W657V97Gyhbz'
 	}
 }
 const projects_creator=()=>{
 	for (let i in projects_info){
 		const card=creator('div');
 		card.classList.add('card');
-		// const cardImage=creator('div');
-		// cardImage.classList.add('card-image');
-
-		//console.log(projects_info[i]['image'])
-		//cardImage.style.backgroundColor='green';
+		card.setAttribute('data-aos','fade-down')
 		card.style.background=`url('${projects_info[i]['image']}') no-repeat center`;
 		card.style.backgroundSize='cover';
-		// card.appendChild(cardImage);
-		//Overlay for scroll
+		//Overlay
 		const cardOverlay=creator('div');
 		cardOverlay.classList.add('card-overlay');
 		const card_head=creator('h3');
 		card_head.classList.add('card-head');
 		//title
 		const title=creator('span');
+		const link=creator('a');
+		link.classList.add('project-link');
+		link.setAttribute('href',projects_info[i]['link']);
+		link.setAttribute('target','_blank');
 		title.classList.add('title');
 		title.innerHTML=projects_info[i]['name'];
-		card_head.appendChild(title);
-		//status
-		/*const status=creator('span');
-		status.classList.add('status');
-		if(projects_info[i]['completed']){	
-			status.innerHTML=projects_info[i]['status'];
-			card_head.appendChild(status);
-		}else{
-			status.innerHTML=projects_info[i]['status'];
-			card_head.appendChild(status);
-		}*/
+		link.appendChild(title);
+		card_head.appendChild(link);
 		cardOverlay.appendChild(card_head);
 		card.appendChild(cardOverlay);
 		classes('project-cards')[0].appendChild(card);
 	}
 }
 const skillsInfo={
-	HTML:9,
-	CSS:8,
-	JavaScript:7,
+	HTML:9.2,
+	CSS:9,
+	JavaScript:8,
 	PHP:5,
 	SQL:6,
 	MongoDb:6,
 	NodeJS:6,
 	React:7,
-	Express:6,
+	ExpressJS:6,
 	BootStrap:7,
 	FireBase:6,
 	LESS:4,
-	SCSS:4,
-	TypeScript:4
+	SASS:4,
+	TypeScript:4,
+	RegEx:6,
+	Git:5,
 }
 const skills_creator=()=>{
 	for(let j in skillsInfo){
@@ -109,6 +106,7 @@ const skills_creator=()=>{
 		const rateValue=creator('span');
 		rateValue.classList.add('rate-value');
 		rateValue.style.width=`${skillsInfo[j]*10}%`;
+		rateValue.setAttribute('title',rateValue.style.width);
 		rateObject.appendChild(rateValue);
 		skillRating.appendChild(rateObject)
 		skillDetail.appendChild(skillRating);
@@ -124,18 +122,18 @@ const scroller={
 	'4':'projects',
 	'5':'footer'
 };
-
+//IIFE for creating projects section,skills section and scroll logic
 (()=>{
 	projects_creator()
 	skills_creator();
+	AOS.init();
 	scroll();
 })();
-
+//For Scrolling via dots
 function scroll(){
 	for(let i in scroller){
 		classes('scroll-dot')[i].addEventListener('click',()=>{
-			ids(scroller[i]).scrollIntoView();
-			// classes('scroll-dot')[i].style.background='#FFF';
+			ids(scroller[i]).scrollIntoView();q
 		})		
 	}
 }

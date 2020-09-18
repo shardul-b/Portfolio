@@ -32,24 +32,7 @@ html,body{
 	background-color: #FFF;
 
 }
-.custom-scroll{
-	position:fixed;
-	top:30%;
-	right:1%;
-}
-.scroll-dot{
-	display: block;
-	cursor: pointer;
-	margin:1em 0;
-	width: 1em;
-	height:1em;
-	border:1px solid #000;
-	background-color: #000;
-	border-radius: 50%;
-}
-.scroll-dot:active{
-	background-color: #FFF;
-}
+
 .all-container{
 	flex-direction: column;
 	margin:0;
@@ -146,7 +129,6 @@ span{
 	50%{
 		content: 'Self Learner';
 	}
-	
 	100%{
 		content:'MERN Stack Developer';
 	}
@@ -192,7 +174,7 @@ h1{
 }
 .about{
 	text-align: justify;
-	padding-bottom:1em;
+	/*padding-bottom:1em;*/
 }
 .title{
 	font-weight: bold;
@@ -266,7 +248,7 @@ h1{
 }
 .skills .container{
 	width:90%;
-	
+	padding-bottom: 1em;
 }
 .skill-detail{
 	padding:1em 0;
@@ -309,20 +291,24 @@ h1{
 	width:100%;
 }
 .card{
-	border:1px solid darkblue;
+	/*border:1px solid darkblue;*/
+	box-shadow: 5px 5px 10px 0 #555;
 	width:100%;
 	border-radius: 5px;
 	margin-bottom:1em;
-	height:10em;
+	height:12em;
 }
 .card-overlay{	
-	height:20%;
+	height:15%;
 	width:100%;
 	position: relative;
-	top:68%;
+	top:85%;
 	border-radius:0 0 5px 5px; 
 	background-color: rgba(0,0,0,0.6);
 	color:#FFF;
+}
+.project-link{
+	text-decoration: none;
 }
 /*Footer*/
 footer{
@@ -330,17 +316,18 @@ footer{
 	background: #011B56;
 	padding:1em 0;
 	color:#FFF;
-	/*position: relative;*/
 }
 footer .container{
 	text-align: center;
-	/*border:1px solid red;*/
 	margin-bottom:3em;
 	/*height: 100%;*/
 }
+.personal-details .resume-link{
+	display: none;
+}
 .resume-link{
 	text-align: center;	
-	margin-top:3em;
+	margin:2em 0;
 }
 .links{
 	justify-content: center;
@@ -377,6 +364,24 @@ footer .container{
 }
 
 @media (min-width: 800px){
+	.custom-scroll{
+		position:fixed;
+		top:30%;
+		right:1%;
+	}
+	.scroll-dot{
+		display: block;
+		cursor: pointer;
+		margin:1em 0;
+		width: 0.8em;
+		height:0.8em;
+		border:1px solid #000;
+		background-color: #000;
+		border-radius: 50%;
+	}
+	.scroll-dot:active{
+		background-color: #FFF;
+	}
 	body{
 		margin:0;
 	}
@@ -441,6 +446,7 @@ footer .container{
 		font-size: 2rem;
 	}
 	.about{
+		margin-top: 1em; 
 		font-size: 1.5rem;
 	}
 	.personal-details{
@@ -464,7 +470,6 @@ footer .container{
 	}	
 	.education{
 		height:80vh;
-		/*border:1px solid yellow;*/
 	}
 	.education .container{
 		border-top: 1px solid #DDD;
@@ -490,8 +495,7 @@ footer .container{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 2em;
-		/*grid-template-rows:1fr 1fr ;*/
-		border:1px solid green;
+		grid-row-gap:2em; 
 		width:100%;
 		height:100%;
 	}
