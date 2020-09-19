@@ -385,6 +385,9 @@ footer .container{
 	body{
 		margin:0;
 	}
+	.personal-details .resume-link{
+		display: block;
+	}
 	.profile-section{
 		width: 100%;
 	}
@@ -460,9 +463,11 @@ footer .container{
 	}
 	.desktop-image-title{
 		align-items: center;
-		/*border:1px solid black;*/
 	}
 	/*Education*/
+	.details{
+		width:85%;
+	}
 	.icon{
 		background-size: 4em;
 		height: 4em;
@@ -514,7 +519,7 @@ footer .container{
 		padding: 1em 0;  
 	}
 	.foot-head{
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 	}
 	.foot-icon{
 		background-size: 2.5em;
@@ -523,6 +528,7 @@ footer .container{
 	}
 	.foot-icon:hover{
 		filter: invert(180);
+		transform: scale(1.5,1.5);
 	}
 	.name{
 		font-size:1.5rem;

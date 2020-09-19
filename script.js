@@ -21,7 +21,7 @@ const projects_info={
 	crl:{
 		name:'CRL Course Website UI',
 		image:'./Images/CRL.png',
-		link:'',
+		link:'https://github.com/shardul-b/CRL',
 		completed:true
 	},
 	confusion:{
@@ -33,7 +33,7 @@ const projects_info={
 	login:{
 		name:'Login Page',
 		image:'./Images/login.jpg',
-		link:'',
+		link:'https://github.com/shardul-b/Login-Page',
 		completed:true
 	},
 	wa:{
