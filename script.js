@@ -12,10 +12,7 @@ const creator=(val)=>{
 	return created;
 };
 
-// classes('scroll-dot')[0].addEventListener('click',()=>{
-// 	classes('tooltip')[0].classList.toggle('hide');
-// })
-
+//Projects Object
 
 const projects_info={
 	crl:{
@@ -27,7 +24,7 @@ const projects_info={
 	confusion:{
 		name:'The ConFusion restaurant',
 		image:'./Images/ConFusion.png',
-		link:'',
+		link:'https://github.com/shardul-b/ConFusion',
 		completed:false
 	},
 	login:{
@@ -70,6 +67,7 @@ const projects_creator=()=>{
 		classes('project-cards')[0].appendChild(card);
 	}
 }
+//Skills Object
 const skillsInfo={
 	HTML:9.2,
 	CSS:9,
@@ -122,19 +120,30 @@ const scroller={
 	'4':'projects',
 	'5':'footer'
 };
+// const age=()=>{
+// 	let dob=new Date((2000,10,15));
+// 	var diff_ms = Date.now();
+//     var age_dt = new Date(diff_ms); 
+//     console.log(age_dt)
+//     console.log(Math.abs(age_dt.getUTCFullYear()-2000));
+// }
 //IIFE for creating projects section,skills section and scroll logic
 (()=>{
 	projects_creator()
 	skills_creator();
 	AOS.init();
 	scroll();
+	//age();
 })();
 //For Scrolling via dots
 function scroll(){
 	for(let i in scroller){
-		classes('scroll-dot')[i].addEventListener('click',()=>{
-			ids(scroller[i]).scrollIntoView();q
+		classes('scroll-dot')[i].addEventListener('click',(e)=>{
+			e.preventDefault();
+			ids(scroller[i]).scrollIntoView();
 		})		
 	}
 }
+
+
 
