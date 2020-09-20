@@ -120,20 +120,12 @@ const scroller={
 	'4':'projects',
 	'5':'footer'
 };
-// const age=()=>{
-// 	let dob=new Date((2000,10,15));
-// 	var diff_ms = Date.now();
-//     var age_dt = new Date(diff_ms); 
-//     console.log(age_dt)
-//     console.log(Math.abs(age_dt.getUTCFullYear()-2000));
-// }
 //IIFE for creating projects section,skills section and scroll logic
 (()=>{
 	projects_creator()
 	skills_creator();
 	AOS.init();
 	scroll();
-	//age();
 })();
 //For Scrolling via dots
 function scroll(){

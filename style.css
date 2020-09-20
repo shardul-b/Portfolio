@@ -144,10 +144,10 @@ span{
 	position: absolute;
 	bottom:0;
 	right:0;
-	color:floralwhite;
+	color:#FFF;
 	font-size: 0.8rem;
 }
-/*Profile Section Mobile Complete*/
+/*Profile Section */
 .profile-section{
 	background-color: #011B56;
 	color:#FFF;
@@ -183,7 +183,6 @@ h1{
 	height:10em;
 	width:10em;
 	margin:0 auto;
-	/*border:1px solid yellow;*/
 }
 .image{
 	border-radius: 50%;
@@ -196,14 +195,12 @@ h1{
 /*Work*/
 .work{
 	background: #FFF;
-	/*color: floralwhite;*/
 }
 .work .container{
 	padding-bottom:1.5em;
 }
 /*Education*/
 .education{
-	/*color:floralwhite;*/
 	background:#FFF;
 }
 .education .container{
@@ -257,17 +254,14 @@ h1{
 .skill-name{
 	width:35%;
 	font-size:1.3em;
-	/*border:1px solid blue;*/
 }
 .skill-rating{
 	width:75%;
-	/*border:1px solid red;*/
 }
 .rate-object{
 	border-radius: 25px;
 	width:100%;
 	background-color: grey;
-	/*border:1px solid green;*/
 }
 .rate-value{
 	display: block;
@@ -292,7 +286,6 @@ h1{
 	width:100%;
 }
 .card{
-	/*border:1px solid darkblue;*/
 	box-shadow: 5px 5px 10px 0 #555;
 	width:100%;
 	border-radius: 5px;
