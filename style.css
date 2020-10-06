@@ -178,6 +178,7 @@ h1{
 }
 .title{
 	font-weight: bold;
+	margin-right:0.2em;
 }
 .image-container{
 	height:10em;
