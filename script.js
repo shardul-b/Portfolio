@@ -37,7 +37,7 @@ const projects_info={
 		name:'WhatsApp UI Clone',
 		completed:false,
 		image:'./Images/wa.jpg',
-		link:'https://code.sololearn.com/W657V97Gyhbz'
+		link:'https://github.com/shardul-b/Whatsapp-clone'
 	}
 }
 const projects_creator=()=>{
