@@ -27,12 +27,13 @@ const projects_info={
 		link:'https://github.com/shardul-b/ConFusion',
 		completed:false
 	},
-	login:{
-		name:'Login Page',
-		image:'./Images/login.jpg',
-		link:'https://github.com/shardul-b/Login-Page',
-		completed:true
+	ecom:{
+		name:'E-commerce Website',
+		image:'./Images/Ecom.png',
+		link:'https://github.com/shardul-b/E-Commerce',
+		completed:true,
 	},
+	
 	wa:{
 		name:'WhatsApp UI Clone',
 		completed:false,
@@ -40,6 +41,12 @@ const projects_info={
 		link:'https://github.com/shardul-b/Whatsapp-clone'
 	}
 }
+/*login:{
+		name:'Login Page',
+		image:'./Images/login.jpg',
+		link:'https://github.com/shardul-b/Login-Page',
+		completed:true
+	},*/
 const projects_creator=()=>{
 	for (let i in projects_info){
 		const card=creator('div');
@@ -71,10 +78,10 @@ const projects_creator=()=>{
 const skillsInfo={
 	HTML:9.2,
 	CSS:9,
-	JavaScript:8,
-	PHP:5,
+	JavaScript:8.5,
+	PHP:6,
 	SQL:6,
-	MongoDb:6,
+	MongoDb:5,
 	NodeJS:6,
 	React:7,
 	ExpressJS:6,
@@ -120,13 +127,6 @@ const scroller={
 	'4':'projects',
 	'5':'footer'
 };
-//IIFE for creating projects section,skills section and scroll logic
-(()=>{
-	projects_creator()
-	skills_creator();
-	AOS.init();
-	scroll();
-})();
 //For Scrolling via dots
 function scroll(){
 	for(let i in scroller){
@@ -136,6 +136,29 @@ function scroll(){
 		})		
 	}
 }
+// Sets age automatically
+const age=()=>{
+	// Get Current Date
+	let date=new Date();
+	let today_date=date.getDate();
+	let month=date.getMonth()+1;
+	let year=date.getFullYear();
+	//Check if birthdate has already passed 
+	if(today_date>=15 && month>=10){
+		classes('age')[0].innerText=`${year-2000} Years`;
+	}else{
+		classes('age')[0].innerText=`${year-2000-1} Years`
+	}
+}
+//IIFE for creating projects section,skills section and scroll logic
+(()=>{
+	projects_creator()
+	skills_creator();
+	AOS.init();
+	scroll();
+	age();
+})();
+
 
 
 

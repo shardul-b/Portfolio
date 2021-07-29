@@ -88,7 +88,7 @@ span{
 	width:2em;
 	height: 2em;
 }
-/*Top Completed for Mobile*/
+/*Top for Mobile*/
 .top{
 	height:100vh;
 	background-color: #FFF;
@@ -167,7 +167,7 @@ h1{
 	justify-content: center;
 }
 .about-section{
-	padding:0.3em 0;
+	padding:1.5em 0;
 }
 .about-title{
 	margin:0;
@@ -292,6 +292,10 @@ h1{
 	border-radius: 5px;
 	margin-bottom:1em;
 	height:12em;
+}
+.card:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 15px 3px #555;
 }
 .card-overlay{	
 	height:15%;
@@ -508,7 +512,7 @@ footer .container{
 	}
 	/*Footer*/
 	footer{
-		height:60vh;
+		height:50vh;
 	}
 	footer .container{
 		padding: 1em 0;  
