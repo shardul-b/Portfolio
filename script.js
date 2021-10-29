@@ -15,31 +15,48 @@ const creator=(val)=>{
 //Projects Object
 
 const projects_info={
-	crl:{
-		name:'CRL Course Website UI',
-		image:'./Images/CRL.png',
-		link:'https://github.com/shardul-b/CRL',
-		completed:true
-	},
+	// crl:{
+	// 	name:'CRL Course Website UI',
+	// 	image:'./Images/CRL.png',
+	// 	link:'https://github.com/shardul-b/CRL',
+	// 	completed:true
+	// },
 	confusion:{
 		name:'The ConFusion restaurant',
 		image:'./Images/ConFusion.png',
 		link:'https://github.com/shardul-b/ConFusion',
-		completed:false
+		completed:false,
+		halted:true
 	},
 	ecom:{
 		name:'E-commerce Website',
 		image:'./Images/Ecom.png',
 		link:'https://github.com/shardul-b/E-Commerce',
 		completed:true,
+		halted:false
 	},
-	
 	wa:{
 		name:'WhatsApp UI Clone',
 		completed:false,
 		image:'./Images/wa.jpg',
-		link:'https://github.com/shardul-b/Whatsapp-clone'
+		link:'https://github.com/shardul-b/Whatsapp-clone',
+		halted:true
+	},
+	vproject:{
+		name:'V-Projects',
+		completed:true,
+		image:'./Images/vproj.png',
+		link:'https://github.com/rohanasurvase/VIT_Internship',
+		halted:false
+	},
+	bookbarn:{
+		name:'BookBarn',
+		completed:false,
+		image:'./Images/books.jpg',
+		link:'',
+		halted:false	
 	}
+
 }
 /*login:{
 		name:'Login Page',
@@ -59,6 +76,17 @@ const projects_creator=()=>{
 		cardOverlay.classList.add('card-overlay');
 		const card_head=creator('h3');
 		card_head.classList.add('card-head');
+		if(!projects_info[i]['completed'] && !projects_info[i]['halted']){
+			const project_status=creator('p');
+			project_status.innerHTML="In progress";
+			project_status.classList.add('project-status');
+			card.appendChild(project_status);
+		}else if (projects_info[i]['halted']) {
+			const project_halted=creator('p');
+			project_halted.innerHTML="Halted";
+			project_halted.classList.add('project-halted');
+			card.appendChild(project_halted);
+		}
 		//title
 		const title=creator('span');
 		const link=creator('a');

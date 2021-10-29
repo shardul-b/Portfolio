@@ -282,6 +282,19 @@ h1{
 .projects .container{
 	margin-bottom:5em;
 }
+.project-status,.project-halted{
+	position: absolute;
+	background-color: gold;
+	width: 20%;
+	margin-top: 0;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 0 5px 5px 0;
+}
+.project-halted{
+	width: 15%;
+	background-color: #FFAC1C;
+}
 .project-cards{
 	justify-content: center;
 	width:100%;
