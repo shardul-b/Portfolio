@@ -30,7 +30,6 @@ html,body{
 	width: 100%;
 	outline: none;
 	background-color: #FFF;
-
 }
 
 .all-container{
@@ -199,6 +198,9 @@ h1{
 }
 .work .container{
 	padding-bottom:1.5em;
+}
+.work>.container>.detail-container{
+	margin:2.5em 0;
 }
 /*Education*/
 .education{
