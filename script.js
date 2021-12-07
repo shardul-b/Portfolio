@@ -107,7 +107,7 @@ const skillsInfo={
 	HTML:9.2,
 	CSS:9,
 	JavaScript:8.5,
-	PHP:6,
+	PHP:7.2,
 	SQL:6,
 	MongoDb:5,
 	NodeJS:6,
@@ -121,8 +121,17 @@ const skillsInfo={
 	RegEx:6,
 	Git:5,
 }
+//sorted skills object
+const result = Object
+ .entries(skillsInfo)
+ .sort((a, b) => b[1] - a[1])
+ .reduce((sortedObj, [k,v]) => ({
+   ...sortedObj, 
+   [k]: v
+ }), {});
+
 const skills_creator=()=>{
-	for(let j in skillsInfo){
+	for(let j in result){
 		/*Details div*/
 		const skillDetail=creator('div');
 		skillDetail.classList.add('skill-detail','flex-space');
@@ -172,10 +181,21 @@ const age=()=>{
 	let month=date.getMonth()+1;
 	let year=date.getFullYear();
 	//Check if birthdate has already passed 
-	if(today_date>=15 && month>=10){
-		classes('age')[0].innerText=`${year-2000} Years`;
+	if(today_date>=15){
+		// Today's date>15 
+		if(month>=10){
+			//month after october(so age= year-born year)
+			classes('age')[0].innerText=`${year-2000} Years`;	
+		}else{
+			//month<10(birthday hasn't occured)
+			classes('age')[0].innerText=`${year-2000-1} Years`
+		}
 	}else{
-		classes('age')[0].innerText=`${year-2000-1} Years`
+		if(month>10){
+			classes('age')[0].innerText=`${year-2000} Years`;	
+		}else{
+			classes('age')[0].innerText=`${year-2000-1} Years`
+		}
 	}
 }
 //IIFE for creating projects section,skills section and scroll logic
